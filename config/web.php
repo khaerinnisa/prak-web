@@ -43,13 +43,35 @@ $config = [
         ],
         'db' => $db,
         
-        'urlManager' => [
+    'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
+        'assetManager'=>[
+            'bundles'=>[
+                'yii\web\jqueryAsset'=> [
+                    'sourcePath' => null,
+                    'basePath' => '@webroot',
+                    'baseUrl' => '@web',
+                    'js'=>[
+                        'template011/js/jquery.min.js',
+                    ]
+                ],
+                'yii\bootstrap5\BootstrapAsset'=>[
+                    'sourcePath' => null ,
+                    'basePath' => '@webroot',
+                    'baseUrl' => '@web',
+                    'css'=>[
+                        'template011/css/bootstrap.min.css'
+                    ],
+                ],
+            ],
+        ],
+        
     ],
+    
     'params' => $params,
 ];
 
